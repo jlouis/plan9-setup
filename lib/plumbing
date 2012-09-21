@@ -1,5 +1,15 @@
 # to update: cat $HOME/lib/plumbing | 9p write plumb/rules
 
 editor = acme
+
+# existing files, possibly tagged by line number, go to editor
+type is text
+data matches 'File "([.a-zA-Z¡-￿0-9_/\-]*[a-zA-Z¡-￿0-9_/\-])", line ([0-9]+)?'
+arg isfile	$1
+data set	$file
+attr add	addr=$2
+plumb to edit
+plumb client $editor
+
 include basic
 

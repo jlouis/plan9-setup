@@ -2,14 +2,25 @@
 
 editor = acme
 
-# existing files, possibly tagged by line number, go to editor
+# Ocaml error messages
 type is text
-data matches 'File "([.a-zA-Z¡-￿0-9_/\-]*[a-zA-Z¡-￿0-9_/\-])", line ([0-9]+)?'
-arg isfile	$1
-data set	$file
-attr add	addr=$2
+data matches 'File "([.a-zA-Z¡-<U+FFFF>0-9_/\-]*[a-zA-Z¡-<U+FFFF>0-9_/\-])", line ([0-9]+)?'
+arg isfile      $1
+data set        $file
+attr add        addr=$2
 plumb to edit
 plumb client $editor
+
+# Trac tickets
+type is text
+data matches 'Trac #([0-9]+)'
+plumb to web
+plumb start web http://trac.tissuu.com:8000/trac/ticket/$1
+
+type is text
+data matches 'Trac #R([0-9]+)'
+plumb to web
+plumb start web http://trac.tissuu.com:8000/trac/report/$1
 
 include basic
 

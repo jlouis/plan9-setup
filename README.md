@@ -4,6 +4,10 @@ This repository contains some configuration I did for Plan9 from user space. A q
 is in here is:
 
 * The `gg` command, which is a shorthand `git grep -n` helper for use with acme
+* The `a+` and `a-` commands which does indentation.
+* The `nocr` command which kills CR
+* The `q` command which quotes a selection
+* ...
 
 Furthermore plumbing rules for:
 

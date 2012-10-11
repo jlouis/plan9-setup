@@ -1,0 +1,6 @@
+#!/bin/rc
+
+flags=()
+while(! ~ $#* 1 && ~ $1 -*) {flags=($flags $1); shift}
+if(~ $#* 1) {grep -n $flags -- $1 *.[Cbchm] /dev/null}
+if not grep -n $flags $* /dev/null

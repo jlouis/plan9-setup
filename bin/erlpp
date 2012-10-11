@@ -1,0 +1,29 @@
+#!/usr/bin/env escript
+
+main([]) ->
+    Data = fetch_until_eof(),
+    format(Data).
+    
+fetch_until_eof() ->
+  add_dot(lists:concat(loop_io_input())).
+  
+add_dot(L) ->
+  Rev = lists:reverse(L),
+  case strip(Rev) of
+    [$. | _] = R -> R;
+    R when is_list(R) -> lists:reverse([$. | Rev])
+  end.
+
+strip([$\n | R]) -> strip(R);
+strip(O) -> O.
+
+loop_io_input() ->
+  case io:get_line("") of
+    eof -> [];
+    Data when is_list(Data) -> [Data | loop_io_input()]
+  end.
+
+format(Data) ->
+  {ok, Toks, _} = erl_scan:string(Data),
+  {ok, Parse} = erl_parse:parse_term(Toks),
+  io:format("~p~n", [Parse]).

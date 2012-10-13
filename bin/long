@@ -1,3 +1,3 @@
-#!/bin/rc
+#!/usr/bin/env rc
 
 cat $* | pr -t -e8 | awk 'length($0) > 80 { print NR ": " $0 }'

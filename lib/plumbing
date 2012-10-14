@@ -13,13 +13,14 @@ plumb client $editor
 
 # Github
 type is text
+data matches 'GH/([a-zA-z]+)/([a-zA-Z_\-]+)#([0-9]+)'
+plumb to web
+plumb start web http://github.com/$1/$2/issues/$3
+
+type is text
 data matches 'GH/([a-zA-z]+)/([a-zA-Z_\-]+)'
 plumb to web
 plumb start web http://github.com/$1/$2
 
-type is text
-data matches 'GH/([a-zA-z]+)/([a-zA-Z_\-]+)#([0-9]+)'
-plumb to web
-plumb start web http://github.com/$1/$2/issues/$3
 
 include basic

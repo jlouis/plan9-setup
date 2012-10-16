@@ -1,0 +1,4 @@
+#!/usr/bin/env rc
+
+cat | 9 sed -e 's/\.\.\./''...''/g' \
+    | erlpp

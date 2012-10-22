@@ -1,7 +1,7 @@
 #!/usr/bin/env rc
 
 TERM=dumb
-acmeshell=rc
 plumber
-acme -a -f '/mnt/font/Droid Sans/10a/font' -F '/mnt/font/Droid Sans Mono/10a/font' $*
+SHELL=rc
+exec acme -a -f '/mnt/font/DejaVu Sans/10a/font' -F '/mnt/font/DejaVu Sans Mono/10a/font' $*
 

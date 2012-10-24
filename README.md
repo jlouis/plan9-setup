@@ -7,7 +7,8 @@ is in here is:
 * The `a+` and `a-` commands which does indentation.
 * The `nocr` command which kills CR
 * The `q` command which quotes a selection
-* ...
+* The `acme-start.rc` helper for spawning acme
+* The `erlfmt` command which nicely formats Erlang terms (Produces UTF-8 output)
 
 Furthermore plumbing rules for:
 

@@ -14,3 +14,23 @@ Furthermore plumbing rules for:
 
 * Ocaml - I did some ocaml work so it is nice to be able to jump to error messages when they
   occur in your codes.
+
+# Other setup things
+
+I add the following to my `.profile`:
+
+	# Plumb files instead of starting new editor.
+	EDITOR=E
+	unset FCEDIT VISUAL
+	
+This sets up the editor to be the `E` command. It checks every second if the file has
+a change according to `ls -l` and lets you use acme as the editor when editing stuff.
+I use that a lot with `git(1)` so commits can be kept inside acme.
+	
+	# Get rid of backspace characters in Unix man output.
+	PAGER=nobs
+
+I kill less as a default pager. This allows me to just scroll in the acme window rather
+than ending up with a mess. `nobs` removes certain control characters so the formatting
+is better.
+		

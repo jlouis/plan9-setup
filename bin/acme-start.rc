@@ -3,5 +3,5 @@
 TERM=dumb
 plumber
 SHELL=rc
-exec acme -a -f '/mnt/font/DejaVu Sans/10a/font' -F '/mnt/font/DejaVu Sans Mono/10a/font' $*
+exec acme $*
 

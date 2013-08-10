@@ -2,6 +2,10 @@
 
 TERM=dumb
 plumber
+	
+fn cd { builtin cd $1 && awd $sysname }
+tabstop=4
+
 SHELL=rc
 exec acme $*
 

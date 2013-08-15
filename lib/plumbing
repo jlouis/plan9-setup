@@ -30,5 +30,15 @@ data matches 'GH/([a-zA-z0-9]+)/([a-zA-Z0-9_\-]+)'
 plumb to web
 plumb start web http://github.com/$1/$2
 
+# Trac tickets
+type is text
+data matches 'Trac #([0-9]+)'
+plumb to web
+plumb start web http://trac.tissuu.com:8000/trac/ticket/$1
+
+type is text
+data matches 'Trac #R([0-9]+)'
+plumb to web
+plumb start web http://trac.tissuu.com:8000/trac/report/$1
 
 include basic

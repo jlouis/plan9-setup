@@ -7,7 +7,7 @@ xinput set-prop "SteelSeries Kinzu V2 Gaming Mouse" 265 3
 # Accel profile (2 = poly) — Pick a polynomial accel curve on which to place accel parameters
 xinput set-prop "SteelSeries Kinzu V2 Gaming Mouse" 264 2
 # Velocity Scaling factor — This is the default scaling factor. Lower values means less accel kick in.
-xinput set-prop "SteelSeries Kinzu V2 Gaming Mouse" 267 12
+xinput set-prop "SteelSeries Kinzu V2 Gaming Mouse" 267 13
 
 xset m default
 

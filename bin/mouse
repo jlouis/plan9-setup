@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Adaptive Decel — set a little bit of this
+# Adaptive Decel — set nothing of this
 xinput set-prop "SteelSeries Kinzu V2 Gaming Mouse" 266 1
 # Constant Decel — The fast Kinzu V2 Mouse needs a decent slowdown amount since it is highly precise
 xinput set-prop "SteelSeries Kinzu V2 Gaming Mouse" 265 3

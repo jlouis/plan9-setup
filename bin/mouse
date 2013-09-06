@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Adaptive Decel — set a little bit of this
-xinput set-prop "SteelSeries Kinzu V2 Gaming Mouse" 266 1
+xinput set-prop "SteelSeries Kinzu V2 Gaming Mouse" 266 4
 # Constant Decel — The fast Kinzu V2 Mouse needs a decent slowdown amount since it is highly precise
 xinput set-prop "SteelSeries Kinzu V2 Gaming Mouse" 265 3
 # Accel profile (2 = poly) — Pick a polynomial accel curve on which to place accel parameters

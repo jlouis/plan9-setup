@@ -24,15 +24,15 @@ init([]) ->
 	{ok, #state{}}.
 	
 handle_call(Msg, _From, State) ->
-	lager:error("Unknown call: ~p", [Msg]),
+	ok = lager:error("Unknown call: ~p", [Msg]),
 	{reply, {error, unknown}, State}.
 	
 handle_cast(Msg, State) ->
-	lager:error("Unknown cast: ~p", [Msg]),
+	ok = lager:error("Unknown cast: ~p", [Msg]),
 	{noreply, State}.
 	
 handle_info(Msg, State) ->
-	lager:error("Unknown handle_info: ~p", [Msg]),
+	ok = lager:error("Unknown handle_info: ~p", [Msg]),
 	{noreply, State}.
 	
 terminate(_Reason, _State) ->

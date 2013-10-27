@@ -1,0 +1,13 @@
+{application, x,
+ [
+  {description, "The X application"},
+  {vsn, "0.1"},
+  {registered, []},
+  {applications, [
+	kernel,
+	stdlib
+	]},
+  {modules, []},
+  {mod, { x_app, []}},
+  {env, []}
+ ]}.

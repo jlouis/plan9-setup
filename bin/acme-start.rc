@@ -5,8 +5,10 @@ plumber
 	
 fn cd { builtin cd $1 && awd $sysname }
 tabstop=4
-font=/home/jlouis/P/plan9/font/lucsans/unicode.8.font
+#font=/home/jlouis/P/plan9/font/lucsans/unicode.8.font
+font='/mnt/font/Noto Sans/13a/font'
+lfont='/mnt/font/Inconsolata/13a/font'
 
 SHELL=rc
-exec acme -f $font $*
+exec acme -f $font -F $lfont $*
 

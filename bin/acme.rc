@@ -10,5 +10,5 @@ font='/mnt/font/Noto Sans/12a/font'
 lfont='/mnt/font/Source Code Pro/13a/font'
 
 SHELL=rc
-exec acme -f $font -F $lfont $*
+exec acme -a -f $font -F $lfont $*
 

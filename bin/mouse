@@ -7,7 +7,7 @@ MOUSE='SteelSeries Kinzu V2 Gaming Mouse'
 xinput set-prop  "$MOUSE" "Device Accel Adaptive Deceleration" 1
 
 # Constant Decel — The fast Kinzu V2 Mouse needs a decent slowdown amount since it is highly precise
-xinput set-prop "$MOUSE" "Device Accel Constant Deceleration" 2.1
+xinput set-prop "$MOUSE" "Device Accel Constant Deceleration" 2.2
 
 # Accel profile (2 = poly) — Pick a linear accel curve on which to place accel parameters
 xinput set-prop "$MOUSE" "Device Accel Profile" 6

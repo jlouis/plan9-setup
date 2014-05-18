@@ -13,6 +13,6 @@ xinput set-prop "$MOUSE" "Device Accel Constant Deceleration" 1.8
 xinput set-prop "$MOUSE" "Device Accel Profile" 6
 
 # Velocity Scaling factor — Lower values means less accel kick in.
-xinput set-prop "$MOUSE" "Device Accel Velocity Scaling" 0.8
+xinput set-prop "$MOUSE" "Device Accel Velocity Scaling" 0.6
 
 

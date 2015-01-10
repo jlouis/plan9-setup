@@ -7,8 +7,8 @@ fn cd { builtin cd $1 && awd $sysname }
 tabstop=4
 #font=/home/jlouis/P/plan9/font/lucsans/unicode.8.font
 #font='/mnt/font/Source Sans Pro/22a/font'
-font='/mnt/font/Noto Sans/19a/font'
-lfont='/mnt/font/Source Code Pro/20a/font'
+font='/mnt/font/Noto Sans/20a/font'
+lfont='/mnt/font/Source Code Pro/22a/font'
 
 SHELL=rc
 exec acme -a -f $font -F $lfont $*

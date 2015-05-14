@@ -19,6 +19,11 @@ attr add        addr=$2-#0+#$3,$2-#0+#$4
 plumb to edit
 plumb client $editor
 
+# Erl Man Pages
+type is text
+data matches '([a-zA-Z¡-￿0-9_\-./]+)\(([1-8])erl\)'
+plumb start rc -c 'erl -man '$2' '$1' >[2=1] | nobs | plumb -i -d edit -a ''action=showdata filename=/man/'$1'('$2')'''
+
 # Github
 type is text
 data matches 'GH/([a-zA-z0-9]+)/([a-zA-Z0-9_\-]+)/([0-9a-f]+)'

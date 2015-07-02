@@ -1,15 +1,17 @@
 #!/usr/bin/env rc
 
 TERM=dumb
+EDITOR=E2
+PAGER=nobs
 plumber
 
 fn cd { builtin cd $1 && awd $sysname }
 tabstop=4
 
-font='/mnt/font/Lucida Grande/12a/font'
 #font='/mnt/font/Noto Sans/11a/font'
+font=$PLAN9/font/lucsans/unicode.8.font
 
-lfont='/mnt/font/Source Code Pro/12a/font'
+lfont=$PLAN9/font/lucm/unicode.9.font
 
 SHELL=rc
 exec acme -a -f $font -F $lfont $*

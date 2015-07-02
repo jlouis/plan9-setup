@@ -6,10 +6,10 @@ plumber
 fn cd { builtin cd $1 && awd $sysname }
 tabstop=4
 
-font='/mnt/font/Lucida Grande/15a/font'
+font='/mnt/font/LucidaGrande/18a/font'
 #font='/mnt/font/Noto Sans/13a/font'
 
-lfont='/mnt/font/Source Code Pro/14a/font'
+lfont='/mnt/font/Menlo-Regular/18a/font'
 
 SHELL=rc
 exec acme -a -f $font -F $lfont $*

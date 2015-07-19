@@ -6,7 +6,8 @@ plumber
 fn cd { builtin cd $1 && awd $sysname }
 tabstop=4
 
-font='/mnt/font/Lucida Grande/15a/font'
+#font='/mnt/font/Lucida Grande/15a/font'
+font='/mnt/font/Roboto Regular/15a/font'
 #font='/mnt/font/Noto Sans/13a/font'
 
 lfont='/mnt/font/Source Code Pro/14a/font'

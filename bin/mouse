@@ -2,12 +2,14 @@
 
 xset m default
 
-MOUSE='SteelSeries Kinzu V2 Gaming Mouse'
+##MOUSE='SteelSeries Kinzu V2 Gaming Mouse'
+MOUSE='SteelSeries SteelSeries Kinzu V3 Gaming Mouse'
+
 # Adaptive Decel — set nothing of this
 xinput set-prop  "$MOUSE" "Device Accel Adaptive Deceleration" 1
 
-# Constant Decel — The Kinzu V2 Mouse need nothing here in the default settings.
-xinput set-prop "$MOUSE" "Device Accel Constant Deceleration" 1.4
+# Constant Decel — The Kinzu V3 Mouse need a little bit here.
+xinput set-prop "$MOUSE" "Device Accel Constant Deceleration" 1.7
 
 # Accel profile (6 = linear) — Pick a linear accel curve on which to place accel parameters.
 # I like the linear profile more than I like the polynomial one, hence this setting.

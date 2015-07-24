@@ -9,7 +9,7 @@ MOUSE='SteelSeries SteelSeries Kinzu V3 Gaming Mouse'
 xinput set-prop  "$MOUSE" "Device Accel Adaptive Deceleration" 1
 
 # Constant Decel — The Kinzu V3 Mouse need a little bit here.
-xinput set-prop "$MOUSE" "Device Accel Constant Deceleration" 1.7
+xinput set-prop "$MOUSE" "Device Accel Constant Deceleration" 1.8
 
 # Accel profile (6 = linear) — Pick a linear accel curve on which to place accel parameters.
 # I like the linear profile more than I like the polynomial one, hence this setting.

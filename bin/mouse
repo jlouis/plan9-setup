@@ -17,4 +17,4 @@ xinput set-prop "$MOUSE" "Device Accel Profile" 6
 
 # Velocity Scaling factor — Lower values means less accel kick in.
 # A decent accel kick-in here which means flicks has a lot of acceleration. 
-xinput set-prop "$MOUSE" "Device Accel Velocity Scaling" 0.17
+xinput set-prop "$MOUSE" "Device Accel Velocity Scaling" 0.18

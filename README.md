@@ -21,8 +21,10 @@ I make use of some Go packages:
 
 	go get github.com/eaburns/E2
 	go get github.com/eaburns/Watch
+	go get 9fans.net/go/acme/acmego
+	
+	# This one is bound to move soon
 	go get code.google.com/p/rsc/cmd/jfmt
-	go get code.google.com/p/rsc/cmd/acmego
 	
 These are quite important for the correct operation. E2 is a better version of the E command. Watch can watch a subdirectory for file changes. The `jfmt` command can reformat JSON data. And acmego uses the (new) 'log' feature of acme to make sure things are formatted nicely when working with go code.
 	

@@ -9,7 +9,7 @@ MOUSE='SteelSeries SteelSeries Kinzu V3 Gaming Mouse'
 xinput set-prop  "$MOUSE" "Device Accel Adaptive Deceleration" 1
 
 # Constant Decel — The Kinzu V3 Mouse need a little bit here.
-xinput set-prop "$MOUSE" "Device Accel Constant Deceleration" 1.8
+xinput set-prop "$MOUSE" "Device Accel Constant Deceleration" 1.6
 
 # Accel profile (6 = linear) — Pick a linear accel curve on which to place accel parameters.
 # I like the linear profile more than I like the polynomial one, hence this setting.
@@ -17,4 +17,4 @@ xinput set-prop "$MOUSE" "Device Accel Profile" 6
 
 # Velocity Scaling factor — Lower values means less accel kick in.
 # A decent accel kick-in here which means flicks has a lot of acceleration. 
-xinput set-prop "$MOUSE" "Device Accel Velocity Scaling" 0.18
+xinput set-prop "$MOUSE" "Device Accel Velocity Scaling" 0.19

@@ -1,20 +1,29 @@
 #!/bin/sh
 
+# First, reset the pointer so it runs on the default setting. This undoes whatever the window manager
+# has decided to mistakenly setup.
 xset m default
+
+# Select the mouse we are going to adjust settings for
 
 ##MOUSE='SteelSeries Kinzu V2 Gaming Mouse'
 MOUSE='SteelSeries SteelSeries Kinzu V3 Gaming Mouse'
 
-# Adaptive Decel — set nothing of this
-xinput set-prop  "$MOUSE" "Device Accel Adaptive Deceleration" 1
+# Do not meddle with the constant deceleration at all. Earlier I was changing this a lot, but
+# there is a better way of handling stuff.
+xinput set-prop "$MOUSE" "Device Accel Constant Deceleration" 1.0
 
-# Constant Decel — The Kinzu V3 Mouse need a little bit here.
-xinput set-prop "$MOUSE" "Device Accel Constant Deceleration" 1.6
-
-# Accel profile (6 = linear) — Pick a linear accel curve on which to place accel parameters.
-# I like the linear profile more than I like the polynomial one, hence this setting.
-xinput set-prop "$MOUSE" "Device Accel Profile" 6
+# Accel profile (2 = polynomial) — Pick a polynomial accel curve on which to place accel parameters.
+# If the pointer is precise, the polynomial curve is easier to control than a standard linear curve. So
+# by picking this curve, things end up being somewhat easier to work with.
+xinput set-prop "$MOUSE" "Device Accel Profile" 2
 
 # Velocity Scaling factor — Lower values means less accel kick in.
-# A decent accel kick-in here which means flicks has a lot of acceleration. 
+# For the polynomial curve, and a fast 1000 cpi mouse, you don't need a whole lot here for things
+# to kick in. The modest setting is this
 xinput set-prop "$MOUSE" "Device Accel Velocity Scaling" 0.19
+
+# Adaptive Deceleration is set last. While the above settings all has to do with pointer speed,
+# this setting then controls the precision of the pointer. Values greater than 1.0 means we allow
+# the input system to decelerate the mouse by this extra factor.
+xinput set-prop  "$MOUSE" "Device Accel Adaptive Deceleration" 1.3

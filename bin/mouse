@@ -6,8 +6,7 @@ xset m default
 
 # Select the mouse we are going to adjust settings for
 
-##MOUSE='SteelSeries Kinzu V2 Gaming Mouse'
-MOUSE='SteelSeries SteelSeries Kinzu V3 Gaming Mouse'
+MOUSE='pointer:Razer Razer Abyssus 1800'
 
 # Do not meddle with the constant deceleration at all. Earlier I was changing this a lot, but
 # there is a better way of handling stuff.
@@ -21,7 +20,7 @@ xinput set-prop "$MOUSE" "Device Accel Profile" 2
 # Velocity Scaling factor — Lower values means less accel kick in.
 # For the polynomial curve, and a fast 1000 cpi mouse, you don't need a whole lot here for things
 # to kick in. The modest setting is this
-xinput set-prop "$MOUSE" "Device Accel Velocity Scaling" 0.19
+xinput set-prop "$MOUSE" "Device Accel Velocity Scaling" 0.35
 
 # Adaptive Deceleration is set last. While the above settings all has to do with pointer speed,
 # this setting then controls the precision of the pointer. Values greater than 1.0 means we allow

@@ -8,8 +8,8 @@ xset m default
 
 MOUSE='pointer:Razer Razer Abyssus 1800'
 
-# Do not meddle with the constant deceleration at all. Earlier I was changing this a lot, but
-# there is a better way of handling stuff.
+# The Abyssus runs an 1800 CPI resolution sensor. Decelerate it to around 1000 CPI, in order to
+# match the Kinzu V3
 xinput set-prop "$MOUSE" "Device Accel Constant Deceleration" 1.7
 
 # Accel profile (2 = polynomial) — Pick a polynomial accel curve on which to place accel parameters.
@@ -18,7 +18,7 @@ xinput set-prop "$MOUSE" "Device Accel Constant Deceleration" 1.7
 xinput set-prop "$MOUSE" "Device Accel Profile" 2
 
 # Velocity Scaling factor — Lower values means less accel kick in.
-# For the polynomial curve, and a fast 1000 cpi mouse, you don't need a whole lot here for things
+# For the polynomial curve, and a fast 1800 CPI mouse, you don't need a whole lot here for things
 # to kick in. The modest setting is this
 xinput set-prop "$MOUSE" "Device Accel Velocity Scaling" 0.19
 

@@ -1,0 +1,20 @@
+#!/usr/bin/env rc
+
+if(~ $#TMPDIR 0)
+	TMPDIR=/tmp
+tmp=$TMPDIR/ssam.tmp.$USER.$pid
+cat $* >$tmp
+
+{
+	# select entire file
+	echo ',{'
+	echo k
+	echo '}'
+	echo 0k
+	
+	# Excess whitespace
+	echo ', x/[ ]+$/ d'
+	echo ', s/\n\n\n+/\n\n/g'
+} | sam -d $tmp >[2]/dev/null
+
+rm -f $tmp

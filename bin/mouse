@@ -10,7 +10,7 @@ MOUSE='pointer:Razer Razer Abyssus 1800'
 
 # The Abyssus runs an 1800 CPI resolution sensor. Decelerate it to around 1000 CPI, in order to
 # match the Kinzu V3
-xinput set-prop "$MOUSE" "Device Accel Constant Deceleration" 1.6
+xinput set-prop "$MOUSE" "Device Accel Constant Deceleration" 1.5
 
 # Accel profile (2 = polynomial) — Pick a polynomial accel curve on which to place accel parameters.
 # If the pointer is precise, the polynomial curve is easier to control than a standard linear curve. So
